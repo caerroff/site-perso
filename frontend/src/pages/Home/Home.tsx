@@ -17,8 +17,11 @@ function Home() {
             response.json().then((data: ResponseAPI) => {
                 setResponse(data)
             })
-        }).catch((reason) => {
-            console.log(reason)
+        }).catch(() => {
+            const errorMessage = {
+                message: 'API Down...'
+            }
+            setResponse(errorMessage)
         })
 
 
