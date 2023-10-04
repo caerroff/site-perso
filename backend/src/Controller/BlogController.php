@@ -8,6 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class BlogController extends AbstractController
 {
@@ -21,18 +24,21 @@ class BlogController extends AbstractController
     }
 
     #[Route('/blog/{id}', name: 'app_blog_get', requirements: ['id' => '\d+'])]
-    public function getPost(Request $request, EntityManagerInterface $em): JsonResponse
+    public function getPost(Request $request, EntityManagerInterface $em, SerializerInterface $serializer): JsonResponse
     {
         $id = $request->get('id');
-        $post = $em->getRepository(Post::class)->find($id);
-        if ($post == null) {
-            return $this->json(null, 500);
-        }
-        return $this->json($post);
+        $post = $em->getRepository(Post::class)->findOneBy(['id' => $id]);
+        return $this->json($post, 200, [], ['groups' => 'json']);
     }
 
     #[Route('/blog/new', name: 'app_blog_new', methods: ['POST'])]
-    public function new(Request $request){
-        return $this->json($request);
+    public function new(Request $request, EntityManagerInterface $em){
+        $post = new Post();
+        $post->setTitle($request->request->get('title'));
+        $post->setAuthor($request->request->get('author'));
+        $post->setCreatedAt(new \DateTimeImmutable($request->request->get('createdAt')));
+        $em->persist($post);
+        $em->flush();
+        return $this->json($request->request->all());
     }
 }

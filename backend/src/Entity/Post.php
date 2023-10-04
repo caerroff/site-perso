@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -11,15 +12,19 @@ class Post
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups('json')]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups('json')]
     private ?string $title = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups('json')]
     private ?string $author = null;
 
     #[ORM\Column]
+    #[Groups('json')]
     private ?\DateTimeImmutable $createdAt = null;
 
     public function getId(): ?int
