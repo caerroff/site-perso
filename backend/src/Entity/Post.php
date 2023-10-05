@@ -12,7 +12,7 @@ class Post
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups('json')]
+    #[Groups(['json'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]

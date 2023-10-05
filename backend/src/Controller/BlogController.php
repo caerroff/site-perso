@@ -31,6 +31,18 @@ class BlogController extends AbstractController
         return $this->json($post, 200, [], ['groups' => 'json']);
     }
 
+    #[Route('/blog/getIds', name: 'app_blog_list')]
+    public function getIds(EntityManagerInterface $em): JsonResponse
+    {
+        $posts = $em->getRepository(Post::class)->findAll();
+        $postIds = [];
+        foreach ($posts as $post) {
+            $postIds[] = $post->getId();
+        }
+//        dd($postIds);
+        return $this->json($postIds, 200);
+    }
+
     #[Route('/blog/new', name: 'app_blog_new', methods: ['POST'])]
     public function new(Request $request, EntityManagerInterface $em){
         $post = new Post();
