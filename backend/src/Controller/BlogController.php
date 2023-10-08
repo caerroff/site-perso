@@ -49,6 +49,7 @@ class BlogController extends AbstractController
         $post->setTitle($request->request->get('title'));
         $post->setAuthor($request->request->get('author'));
         $post->setCreatedAt(new \DateTimeImmutable($request->request->get('createdAt')));
+        $post->setContent($request->request->get('content'));
         $em->persist($post);
         $em->flush();
         return $this->json($request->request->all());

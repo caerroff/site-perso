@@ -29,6 +29,7 @@ class Post
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[Groups('json')]
     private ?string $content = null;
 
     public function getId(): ?int
