@@ -17,3 +17,7 @@ Réalisée en React JS, c'est toute la couche présentation du site. Tout ce qui
 ### Partie Blog
 
 ### Partie CV
+
+## Un docker
+
+Servant à faire tourner une base de données MariaDB, il n'est pour l'instant pas très développé et méritrait davantage de configuration
