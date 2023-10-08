@@ -34,7 +34,7 @@ class BlogController extends AbstractController
     #[Route('/blog/getIds', name: 'app_blog_list')]
     public function getIds(EntityManagerInterface $em): JsonResponse
     {
-        $posts = $em->getRepository(Post::class)->findAll();
+        $posts = $em->getRepository(Post::class)->findOrderPosted();
         $postIds = [];
         foreach ($posts as $post) {
             $postIds[] = $post->getId();
