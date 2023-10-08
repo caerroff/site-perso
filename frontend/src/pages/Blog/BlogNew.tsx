@@ -1,11 +1,18 @@
+import { Link } from 'react-router-dom'
+
 function BlogNew() {
     return (
         <>
+            <Link to='/blog' className="border-2 border-orange-500">Retour</Link>
             <h1>Formulaire</h1>
             <form method='POST' action='http://localhost:3000/blog/new'>
                 <div className="border">
                     <label>Titre</label>
                     <input className="border border-black m-2" type='text' id='title' name='title' />
+                </div>
+                <div className="border flex flex-col">
+                    <label className="ml-2 pt-2 align-middle">Contenu</label>
+                    <textarea className="border border-black m-2 w-11/12" name="content" />
                 </div>
                 <div className="border">
                     <label>Auteur</label>

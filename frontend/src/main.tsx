@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import Home from './pages/Home/Home'
 import Error from './pages/Error/Error.tsx'
 import Blog from './pages/Blog/Blog.tsx'
@@ -20,6 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
-    <App />
   </React.StrictMode>,
 )
