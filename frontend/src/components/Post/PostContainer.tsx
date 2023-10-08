@@ -10,7 +10,6 @@ function PostContainer() {
                 response.json()
                     .then((data) => {
                         setPostsId(data)
-                        console.log(data)
                     })
                     .catch((reason) => {
                         console.log(reason)
@@ -20,21 +19,19 @@ function PostContainer() {
 
     return (
         <>
-            {/* {freelanceProfiles.map((profile, index) => (
-                    <Card
-                        key={`${profile.name}-${index}`}
-                        label={profile.jobTitle}
-                        picture={profile.picture}
-                        title={profile.name}
-                    />
-                ))} */}
-            {postsId.map((id) => (
-                <div>
-                    <Post
-                        url={`/blog/${id}`}
-                    />
+            <div className="flex w-full">
+                <div className="border-2 w-1/4 p-4 text-center bg-purple-50">
+                    <h1 className="underline text-xl">Options de Tri</h1>
                 </div>
-            ))}
+                <div className="w-2/3 mx-2 p-4 border-2 bg-lime-50">
+                    <h1 className="underline text-2xl text-center">Posts</h1>
+                    {postsId.map((id) => (
+                        <Post
+                            url={`/blog/${id}`}
+                        />
+                    ))}
+                </div>
+            </div>
         </>
     )
 }

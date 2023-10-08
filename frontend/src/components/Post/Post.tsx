@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 type Props = {
     url: string
@@ -12,11 +12,11 @@ function Post(props: Props) {
 
 
     useEffect(() => {
+        console.log("effect");
         fetch('http://localhost:3000' + props.url)
             .then((response) => response.json()
                 .then((postData) => {
                     setPost(postData)
-                    console.log(postData)
                 })
                 .catch((error) => console.log(error))
             )
@@ -24,9 +24,10 @@ function Post(props: Props) {
 
     return (
         <>
-            <div className='m-5 space-x-5 space-y-3'>
-                <h1>Post</h1>
-                <p>{post.title}</p>
+            <div className='border-2 border-blue-400 hover:bg-blue-100 bg-white my-2 rounded-xl p-2'>
+                <h1 className="underline uppercase">{post.title}</h1>
+                <p>{post.author}</p>
+                <p className="italic text-gray-500 text-sm w-full">Écrit le {new Date(post.createdAt).toLocaleDateString('FR')}</p>
             </div>
         </>
     )
