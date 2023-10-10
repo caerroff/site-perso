@@ -7,7 +7,7 @@ function Error() {
                 <h1 className="text-3xl italic">Pas si vite...</h1>
                 <p>La page que vous cherchez n'existe pas encore... Pas de panique, si vous la cherchez, c'est qu'elle devrait arriver bientôt ;)</p>
                 <Loader />
-                <img className="h-50" src="/404.webp" alt="Logo 404" />
+                <p className='text-9xl py-40'>:/</p>
             </div>
         </>
     )
