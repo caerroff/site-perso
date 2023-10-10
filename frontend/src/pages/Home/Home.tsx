@@ -1,42 +1,40 @@
 import { useState, useEffect } from 'react'
+import { Loader } from '../../components/Loader/index.tsx'
 
-type ResponseAPI = {
-    message: string;
-
-}
-
-const emptyResponseAPI: ResponseAPI = {
-    message: ''
-}
 
 function Home() {
-    const [response, setResponse] = useState(emptyResponseAPI)
+    const [response, setResponse] = useState({})
+    const [loading, setLoading] = useState(true)
 
-    const callApi = (): void => {
-        fetch('http://localhost:3000').then((response) => {
-            response.json().then((data: ResponseAPI) => {
-                setResponse(data)
-            })
-        }).catch(() => {
-            const errorMessage = {
-                message: 'API Down...'
-            }
-            setResponse(errorMessage)
-        })
-
-
-    }
 
     useEffect(() => {
-        callApi()
+        setLoading(true)
+        async function fetchApi() {
+            try {
+                const response = await fetch('http://localhost:3000')
+                const data = await response.json()
+                console.log(data)
+                setResponse(data)
+            } catch (error) {
+                console.log(error)
+            }
+            finally {
+                setLoading(false)
+            }
+        }
+        fetchApi()
     }, [])
 
     return (
         <>
-            <div className='bg-indigo-200 m-5 rounded-3xl px-10 py-2 text-center h-fit pt-3'>
-                <h1 className="text-3xl font-mono">Développeur Freelance</h1>
-                <p className="italic text-gray-700 underline">{response.message ? response.message : ''}</p>
-                <div className="flex text-left border border-black rounded-2xl h-full mt-5">
+            <div className='bg-indigo-200 m-5 rounded-3xl px-10 py-2 text-center mt-40 h-[60vh] pt-3'>
+                <h1 className="text-3xl font-mono pt-8">Développeur Freelance</h1>
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <p className="italic text-gray-700 underline">{response.message}</p>
+                )}
+                <div className="flex text-left border border-black rounded-2xl h-fit mt-5">
                     <div className="w-1/3 border-r border-black p-5 bg-blue-50 rounded-l-2xl">
                         <h1 className="text-xl font-semibold">Ma Stack</h1>
                         <h2>☀️ Front-End:</h2>
