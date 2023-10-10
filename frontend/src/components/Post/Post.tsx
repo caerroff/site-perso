@@ -35,17 +35,21 @@ function Post(props: Props) {
 
     return (
         <>
-            {loading ? (
-                <Loader />
-            ) : (
-                <div className='border-2 border-blue-400 hover:bg-blue-100 bg-white my-2 rounded-xl p-2'>
-                    <h1 className="underline uppercase">{post.title}</h1 >
-                    <p className="font-mono m-3">{post.content}</p>
-                    <p className="italic font-extralight">{post.author}</p>
-                    <p className="italic text-gray-500 text-sm w-full">Écrit le {new Date(post.createdAt).toLocaleDateString('FR')}</p>
-                </div >
-            )
-            }
+            <div className='flex flex-col border-2 border-blue-400 hover:bg-blue-100 bg-white rounded-xl p-2'>
+                {loading ? (
+                    <div className='flex flex-col w-full items-center'>
+                        <Loader />
+                    </div>
+                ) : (
+                    <>
+                        <h1 className="underline uppercase">{post.title}</h1 >
+                        <p className="font-mono m-3">{post.content}</p>
+                        <p className="italic font-extralight">{post.author}</p>
+                        <p className="italic text-gray-500 text-sm w-full">Écrit le {new Date(post.createdAt).toLocaleDateString('FR')}</p>
+                    </>
+                )
+                }
+            </div >
 
         </>
     )

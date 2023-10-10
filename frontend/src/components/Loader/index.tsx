@@ -15,7 +15,7 @@ export const Loader = styled.div`
     text-align: center;
     self-align: center;
     width: 100%;
-    margin-left: 49%;
+    margin-top: 20px;
     border: 4px solid #00aa00;
     border-bottom-color: transparent;
     border-radius: 23px;
