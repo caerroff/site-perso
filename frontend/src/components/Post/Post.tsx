@@ -35,14 +35,14 @@ function Post(props: Props) {
 
     return (
         <>
-            <div className='flex flex-col border-2 border-blue-400 hover:bg-blue-100 bg-white rounded-xl p-2'>
+            <div className='flex flex-col border-2 border-blue-400 hover:bg-blue-100 cursor-pointer transition ease-linear duration-300 bg-white rounded-xl p-2'>
                 {loading ? (
                     <div className='flex flex-col w-full items-center'>
                         <Loader />
                     </div>
                 ) : (
                     <>
-                        <h1 className="underline uppercase">{post.title}</h1 >
+                        <h1 className="underline uppercase text-center">{post.title}</h1 >
                         <p className="font-mono m-3">{post.content}</p>
                         <p className="italic font-extralight">{post.author}</p>
                         <p className="italic text-gray-500 text-sm w-full">Écrit le {new Date(post.createdAt).toLocaleDateString('FR')}</p>
