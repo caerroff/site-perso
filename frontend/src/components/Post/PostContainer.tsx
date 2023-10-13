@@ -24,7 +24,7 @@ function PostContainer() {
 
     return (
         <>
-            <div className="flex w-full">
+            <div className="flex w-full py-24 space-y-46">
                 <div className="border-2 w-1/4 p-4 text-center bg-purple-50">
                     <h1 className="underline text-xl">Options de Tri</h1>
                 </div>
@@ -35,7 +35,7 @@ function PostContainer() {
                             <Loader />
                         </div>
                     ) : (
-                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
                             {postsId.map((id) => {
                                 return (
                                     <Post url={id} />
