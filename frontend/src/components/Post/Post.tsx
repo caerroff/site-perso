@@ -14,7 +14,7 @@ type Post = {
 }
 
 function Post(props: Props) {
-    const [post, setPost] = useState<Post>()
+    const [post, setPost] = useState<Post>({ title: '', content: '', author: '', createdAt: '' })
     const [loading, setLoading] = useState(true)
 
 

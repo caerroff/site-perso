@@ -11,17 +11,6 @@ function showHideMobileMenu() {
     }
 }
 
-function showHideMobileUser() {
-    const mobileUser = document.getElementById('user-menu')
-    if (mobileUser) {
-        if (mobileUser.classList.contains('hidden')) {
-            mobileUser.classList.remove('hidden')
-        } else {
-            mobileUser.classList.add('hidden')
-        }
-    }
-}
-
 function Header() {
 
     return (
