@@ -76,14 +76,12 @@ function Header() {
             </div>
 
             <div className="hidden" id="mobile-menu">
-                <div className="space-y-1 px-2 pb-3 pt-2">
-                    <Link to="/" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Accueil</Link>
-                    <Link to="/blog" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Blog</Link>
-                    <Link to="/projects" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Projets</Link>
-                    <Link to="/calendar" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Calendrier</Link>
-                </div>
+                <Link to="/" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Accueil</Link>
+                <Link to="/blog" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Blog</Link>
+                <Link to="/projects" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Projets</Link>
+                <Link to="/calendar" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Calendrier</Link>
             </div>
-        </nav>
+        </nav >
 
     )
 }

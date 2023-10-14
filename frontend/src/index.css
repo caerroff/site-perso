@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #1c1c1c;
@@ -23,4 +24,15 @@ body {
     background-color: #dfc0c0 !important;
     border-radius: 5px;
     padding: 10px;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url('Lobster/lobster.ttf');
+}
+
+.title-font {
+    font-family: lobster;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 7px #896900;
 }

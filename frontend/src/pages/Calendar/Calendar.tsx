@@ -7,6 +7,7 @@ function Calendar() {
             <FullCalendar
                 plugins={[dayGridPlugin]}
                 initialView="dayGridMonth"
+                locale='FR-fr'
             />
         </>
     )

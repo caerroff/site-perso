@@ -24,11 +24,11 @@ function PostContainer() {
 
     return (
         <>
-            <div className="flex w-full py-24 space-y-46">
-                <div className="border-2 w-1/4 p-4 text-center bg-purple-50">
+            <div className="grid grid-cols-1 md:grid-cols-4 w-full py-12 gap-2">
+                <div className="border-2 md:col-span-1 p-4 text-center bg-purple-50">
                     <h1 className="underline text-xl">Options de Tri</h1>
                 </div>
-                <div className="w-3/4 mx-2 p-4 border-2 bg-blue-100 bg-gradient-to-br from-purple-100">
+                <div className="md:col-span-3 p-4 border-2 bg-blue-100 bg-gradient-to-br from-purple-100">
                     <h1 className="underline text-2xl text-center pb-5">Posts</h1>
                     {loading ? (
                         <div className="flex flex-col items-center">

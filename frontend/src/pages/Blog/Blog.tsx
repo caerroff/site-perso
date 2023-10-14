@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 function Blog() {
     return (
         <>
-            <div className="p-5 space-y-5">
-                <Link className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' to='/blog/new'>Nouveau Post</Link>
+            <div className="p-5">
+                <Link className='bg-blue-500 hover:bg-blue-800 active:bg-blue-900 text-white hover:border hover:border-red-300 font-bold p-2 rounded-2xl' to='/blog/new'>Nouveau Post</Link>
                 <PostContainer />
             </div>
         </>

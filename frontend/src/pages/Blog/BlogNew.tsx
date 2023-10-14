@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom'
 function BlogNew() {
     return (
         <>
-            <div className='m-5 border-4 border-black rounded-2xl bg-gray-600'>
+            <div className='m-5 border-4 border-black rounded-2xl bg-gray-700 bg-gradient-to-tl via-gray-600 from-gray-200'>
                 <div className='bg-orange-300 p-4 rounded-t-xl'>
                     <h1 className='uppercase text-center'>Formulaire</h1>
                 </div>
                 <div className='m-5'>
                     <form id='blog_form' method='POST' action='http://localhost:3000/blog/new'
-                        className='grid 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2'>
-                        <div className="border flex items-center justify-center">
-                            <label>Titre</label>
-                            <input className='border border-1 border-black w-2/3 m-3'></input>
+                        className='flex flex-col'>
+                        <div className=" flex flex-col items-center justify-center">
+                            <label className='text-xl'>Titre</label>
+                            <input placeholder="Titre de l'article" className='bg-gray-200 bg-gradient-to-t from-gray-400 w-1/2 m-3 text-black placeholder-gray-500 placeholder:italic text-center shadow-gray-100 shadow-inner focus:ring focus:ring-red-500' name='title'></input>
                         </div>
-                        <div className="border flex items-center justify-center">
-                            <label>Auteur</label>
-                            <input className="border border-black m-2" type='text' id='author' name='author' />
+                        <div className=" flex flex-col items-center justify-center">
+                            <label className='text-xl'>Auteur</label>
+                            <input className='bg-gray-500 bg-gradient-to-b from-gray-300 w-1/3 m-3' name='author'></input>
                         </div>
-                        <div className="border flex flex-col items-center justify-center col">
+                        <div className="border border-black flex flex-col items-center justify-center col">
                             <label className="ml-2 pt-2 align-middle">Contenu</label>
                             <textarea className="border border-black h-60 m-2 w-11/12" name="content" />
                         </div>
-                        <div className="border flex items-center justify-center">
+                        <div className="border border-black flex items-center justify-center">
                             <label>Date</label>
                             <input className="border border-black p-2 m-2" type='date' id='createdAt' name='createdAt' />
                         </div>
