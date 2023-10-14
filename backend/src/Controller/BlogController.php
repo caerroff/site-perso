@@ -44,14 +44,15 @@ class BlogController extends AbstractController
     }
 
     #[Route('/blog/new', name: 'app_blog_new', methods: ['POST'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function new(Request $request, EntityManagerInterface $em){
         $post = new Post();
         $post->setTitle($request->request->get('title'));
         $post->setAuthor($request->request->get('author'));
         $post->setCreatedAt(new \DateTimeImmutable($request->request->get('createdAt')));
         $post->setContent($request->request->get('content'));
-        $em->persist($post);
-        $em->flush();
-        return $this->json($request->request->all());
+        // $em->persist($post);
+        // $em->flush();
+        return $this->redirect('http://localhost:5173/blog');
     }
 }
