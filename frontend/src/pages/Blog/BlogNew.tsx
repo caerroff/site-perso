@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 function BlogNew() {
     return (
         <>
-            <div className='m-5 border-4 border-black rounded-2xl'>
+            <div className='m-5 border-4 border-black rounded-2xl bg-gray-600'>
                 <div className='bg-orange-300 p-4 rounded-t-xl'>
-                    <h1 className='uppercase'>Formulaire</h1>
+                    <h1 className='uppercase text-center'>Formulaire</h1>
                 </div>
                 <div className='m-5'>
                     <form id='blog_form' method='POST' action='http://localhost:3000/blog/new'

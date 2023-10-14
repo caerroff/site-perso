@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Loader } from '../../components/Loader/index.tsx'
+import { Link } from 'react-router-dom'
 
+type Response = {
+    message: string
+}
 
 function Home() {
-    const [response, setResponse] = useState({})
+    const [response, setResponse] = useState<Response>({ message: '' })
     const [loading, setLoading] = useState(true)
 
 
@@ -13,7 +17,6 @@ function Home() {
             try {
                 const response = await fetch('http://localhost:3000')
                 const data = await response.json()
-                console.log(data)
                 setResponse(data)
             } catch (error) {
                 console.log(error)
@@ -23,19 +26,35 @@ function Home() {
             }
         }
         fetchApi()
+        const arrowDown = document.getElementById('arrow-down')
+        const projectBox = document.getElementById('projectBox')
+        arrowDown?.addEventListener('click', () => {
+            projectBox?.scroll({
+                top: projectBox.scrollHeight,
+                left: 0,
+                behavior: 'smooth'
+            })
+        })
     }, [])
 
     return (
         <>
-            <div className='bg-gray-800 text-white m-5 rounded-3xl px-10 py-2 text-center h-fit pt-3'>
+            <div className='bg-gray-800 bg-gradient-to-b via-indigo-800 from-indigo-500 text-white m-3 md:m-5 rounded-3xl px-3 md:px-10 py-2 text-center h-fit pt-3'>
                 <h1 className="text-3xl font-mono pt-8">Développeur Freelance</h1>
                 {loading ? (
-                    <Loader />
+                    <div className='mx-auto w-full'>
+                        <Loader />
+                    </div>
                 ) : (
-                    <p className="italic text-gray-300 underline">{response.message}</p>
+                    <p className="italic text-gray-300 underline">{response.message ? response.message : 'API Indisponible...'}</p>
                 )}
-                <div className="text-left mt-10 sm:h-auto md:h-96 flex flex-col xs:flex-col sm:flex-col md:flex-row">
-                    <div className=" sm:w-full md:w-1/2 p-5 rounded-3xl bg-gray-800 bg-gradient-to-b via-gray-800 from-purple-500">
+                <p className='text-xl pt-3'>👋🏻 Bonjour, je m'appelle Thomas Masin et je suis développeur FullStack en freelance</p>
+                <p className='w-full md:w-3/4 md:mx-auto p-5'>👨🏻‍🎓 Étudiant en informatique à l'IUT de Blagnac (31), je suis passionné par la programmation et l'informatique depuis mes 12 ans.
+                    J'ai commencé par apprendre le Python, le C++ et le Java, avant de me tourner vers le développement web, en React et en Symfony.
+                    Depuis ma deuxième année de BUT (2022-2023), je suis alternant à la Gendarmerie Nationale. Plus d'informations sont disponibles sur la <Link to="/projects" className='underline text-green-600'>page projets</Link>.
+                </p>
+                <div className="text-left mb-3 md:mb-10 md:mt-10 sm:h-auto md:h-96 flex flex-col xs:flex-col sm:flex-col md:flex-row">
+                    <div className="w-full md:w-1/4 p-5">
                         <h1 className="text-xl font-semibold">Ma Stack</h1>
                         <h2>☀️ Front-End:</h2>
                         <ul className="list-disc pl-10">
@@ -53,19 +72,37 @@ function Home() {
                             <li>Docker</li>
                         </ul>
                     </div>
-                    <div className="sm:w-1/2 grid md:ml-5 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-fit gap-5 sm:mt-12 self-center justify-center items-center">
-                        <img src='/assets/react.svg' alt="react logo" className="h-24 mx-auto xl:col-span-2" />
-                        <img src='/assets/symfony.png' alt="symfony logo" className="h-24 pt-0 mx-auto xl:col-span-2" />
-                        <div className='h-fit inline-block align-middle w-fit mx-auto xl:col-span-4'>
-                            <img src='/assets/htmlcss.png' alt="html logo" className='h-14 mr-1 mx-auto' />
-                            <img src='/assets/js.png' alt="js logo" className='h-12 mt-2 mx-auto' />
+                    <div className='w-full md:w-1/4 p-5'>
+                        <h1 className='text-xl text-center font-semibold mb-3'>Mes projets en bref</h1>
+                        <div id='projectBox' className='grid grid-cols-1 gap-3 overflow-scroll md:h-64 md:mt-3'>
+                            <div className='text-center border border-blue-400 rounded-3xl space-y-2 p-2'>
+                                <h2>Développement d'une application nationale</h2>
+                                <h3 className='text-gray-300 text-sm'>Gendarmerie Nationale</h3>
+                                <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
+                            </div>
+                            <div className='text-center border border-blue-400 rounded-3xl space-y-2 p-2'>
+                                <h2>Développement d'une application nationale</h2>
+                                <h3 className='text-gray-300 text-sm'>Gendarmerie Nationale</h3>
+                                <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
+                            </div>
+                            <div className='text-center border border-red-400 rounded-3xl space-y-2 p-2'>
+                                <h2>Développement d'une application nationale</h2>
+                                <h3 className='text-gray-300 text-sm'>Personnel</h3>
+                                <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
+                            </div>
+                            <span id='arrow-down' className='invisible sm:visible sticky inset-0 bottom-1 text-center px-3 opacity-80 hover:opacity-100 hover:cursor-pointer bg-gray-300 m-auto rounded-full'><i className='fa fa-fw fa-arrow-down text-black'></i></span>
                         </div>
-                        <img src='/assets/docker.webp' alt="docker logo" className="h-24 mx-auto xl:col-span-2" />
-                        <img src='/assets/mariadb.png' alt="mariadb logo" className="h-24 mx-auto col-span-2" />
                     </div>
-                </div>
-                <div className="mt-26 mb-48 p-5 text-right">
-                    <h1 className="underline text-2xl font-semibold">Right part</h1>
+                    <div className="sm:w-1/2 grid md:ml-5 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-fit gap-5 sm:mt-12 self-center justify-center items-center">
+                        <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto xl:col-span-2" />
+                        <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto xl:col-span-2" />
+                        <div className='h-fit inline-block align-middle w-fit mx-auto xl:col-span-4'>
+                            <img src='/assets/htmlcss.png' alt="html logo" className='h-12 md:h-14 mr-1 mx-auto' />
+                            <img src='/assets/js.png' alt="js logo" className='h-10 md:h-12 mt-2 mx-auto' />
+                        </div>
+                        <img src='/assets/docker.webp' alt="docker logo" className="h-16 md:h-24 mx-auto xl:col-span-2" />
+                        <img src='/assets/mariadb.png' alt="mariadb logo" className="h-16 md:h-24 mx-auto col-span-2" />
+                    </div>
                 </div>
             </div>
         </>
