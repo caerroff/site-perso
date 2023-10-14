@@ -53,7 +53,7 @@ function Home() {
                     J'ai commencé par apprendre le Python, le C++ et le Java, avant de me tourner vers le développement web, en React et en Symfony.
                     Depuis ma deuxième année de BUT (2022-2023), je suis alternant à la Gendarmerie Nationale. Plus d'informations sont disponibles sur la <Link to="/projects" className='underline text-green-600'>page projets</Link>.
                 </p>
-                <div className="text-left mb-3 md:mb-10 md:mt-2 sm:h-auto md:h-96 flex flex-col xs:flex-col sm:grid sm:grid-cols-2 md:flex md:flex-row">
+                <div className="text-left mb-3 md:mb-10 md:mt-2 sm:h-fit md:h-fit flex flex-col xs:flex-col sm:grid sm:grid-cols-2 md:flex md:flex-row h-fit">
                     <div className="w-full md:w-1/4 p-5">
                         <h1 className="text-xl font-semibold">Ma Stack</h1>
                         <h2>☀️ Front-End:</h2>
@@ -94,8 +94,8 @@ function Home() {
                         </div>
                     </div>
                     <div className="sm:w-full sm:col-span-2 md:w-1/2 md:col-span-1 grid md:ml-5 grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-fit gap-2 sm:mt-12 md:mt-0">
-                        <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto col-span-2 xl:col-span-1" />
-                        <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto col-span-2 sm:col-span-2 xl:col-span-3" />
+                        <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto col-span-2 xl:col-span-2" />
+                        <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto col-span-2 sm:col-span-2 xl:col-span-2" />
                         <div className='h-fit inline-block align-middle col-span-4 xs:col-span-1 w-fit mx-auto xl:col-span-4'>
                             <img src='/assets/htmlcss.png' alt="html logo" className='h-12 md:h-14 mr-1 mx-auto' />
                             <img src='/assets/js.png' alt="js logo" className='h-10 md:h-12 mt-2 mx-auto' />
