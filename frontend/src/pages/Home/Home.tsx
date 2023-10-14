@@ -39,7 +39,7 @@ function Home() {
 
     return (
         <>
-            <div className='xl:text-xl bg-gray-900 bg-gradient-to-b via-indigo-900 from-indigo-600 text-white m-3 md:m-5 rounded-3xl px-3 md:px-10 py-2 text-center h-fit pt-3'>
+            <div className='xl:text-xl bg-blue-950 bg-gradient-to-br via-indigo-950 from-indigo-800 text-white m-3 md:m-5 rounded-3xl px-3 md:px-10 py-2 text-center h-fit pt-3'>
                 <p className=" text-5xl font-mono pt-8 title-font mb-2">Développeur Freelance</p>
                 {loading ? (
                     <div className='mx-auto w-full'>

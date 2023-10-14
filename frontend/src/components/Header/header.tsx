@@ -37,10 +37,10 @@ function Header() {
                         </Link>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                <Link to="/" className="text-gray-200 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Accueil</Link>
-                                <Link to="/blog" className="text-gray-200 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blog</Link>
-                                <Link to="/projects" className="text-gray-200 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projets</Link>
-                                <Link to="/calendar" className="text-gray-200 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendrier</Link>
+                                <Link to="/" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Accueil</Link>
+                                <Link to="/blog" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blog</Link>
+                                <Link to="/projects" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projets</Link>
+                                <Link to="/calendar" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendrier</Link>
                             </div>
                         </div>
                     </div>
