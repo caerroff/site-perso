@@ -55,10 +55,10 @@ function Home() {
     return (
         <>
             <div id='container' className='xl:text-xl bg-blue-950 bg-gradient-to-b via-indigo-950 from-purple-950 text-white m-3 md:m-5 rounded-3xl md:px-10 space-y-2 h-fit'>
-                <div className='h-screen pt-96'>
-                    <div className='grid grid-cols-3 items-center h-64 space-x-8'>
-                        <div id='title' className='text-center font-semibold col-span-2'>
-                            <p className='title-font text-8xl'>Développeur Fullstack Freelance</p>
+                <div className='h-screen pt-64 md:pt-96'>
+                    <div className='grid md:grid-cols-3 content-center items-center justify-items-center h-64 space-y-8 md:space-y-0 md:space-x-8'>
+                        <div id='title' className='text-center font-semibold md:col-span-2'>
+                            <p className='title-font text-6xl md:text-8xl'>Développeur Fullstack Freelance</p>
                             {loading ? (
                                 <div className='mx-auto w-full'>
                                     <Loader />
@@ -67,12 +67,12 @@ function Home() {
                                 <p className="font-sans shadow-none text-gray-300 text-lg">{response.message ? response.message : 'API Indisponible...'}</p>
                             )}
                         </div>
-                        <img className='rounded-full h-64' src='/assets/photo-profil.png'></img>
+                        <img className='rounded-full h-36 md:h-64' src='/assets/photo-profil.png'></img>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 font-sans">
-                    <div className="bg-gray-200 bg-gradient-to-tl col-span-2 from-gray-400 rounded-3xl text-center text-black">
-                        <p className='text-xl pt-3'>👋🏻 Bonjour, je m'appelle Thomas Masin et je suis développeur FullStack en freelance</p>
+                <div className="grid mx-auto md:grid-cols-3 gap-4 font-sans mx-2">
+                    <div className="bg-gray-200 bg-gradient-to-tl md:col-span-2 from-gray-400 rounded-3xl text-center text-black p-2">
+                        <p className='text-xl pt-3'><span className='text-6xl'>👋🏻</span> <br />Bonjour, je m'appelle Thomas Masin et je suis développeur FullStack en freelance</p>
                         <p className='w-full pt-5'>👨🏻‍🎓 Étudiant en informatique à l'IUT de Blagnac (31), je suis passionné par la programmation et l'informatique depuis mes 12 ans.
                             J'ai commencé par apprendre le Python, le C++ et le Java, avant de me tourner vers le développement web, en React et en Symfony.
                             Depuis ma deuxième année de BUT (2022-2023), je suis alternant à la Gendarmerie Nationale. Plus d'informations sont disponibles sur la <Link to="/projects" className='underline text-green-600'>page projets</Link>.
@@ -83,7 +83,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="text-left mb-3 md:mb-10 md:mt-2 sm:h-fit md:h-fit flex flex-col xs:flex-col py-32 sm:grid sm:grid-cols-2 md:flex md:flex-row h-fit">
+                <div className="text-left mb-3 md:mb-10 md:mt-2 sm:h-fit md:h-fit flex flex-col xs:flex-col md:py-32 sm:grid sm:grid-cols-2 md:flex md:flex-row h-fit">
                     <div className="w-full md:w-1/4 p-5">
                         <h1 className="text-xl font-semibold">Ma Stack</h1>
                         <h2>☀️ Front-End:</h2>
@@ -102,7 +102,7 @@ function Home() {
                             <li>Docker</li>
                         </ul>
                     </div>
-                    <div className='w-full md:w-1/4 pt-5'>
+                    <div className='w-4/5 mx-auto md:w-1/4 pt-5'>
                         <h1 className='text-xl text-center font-semibold mb-3'>Mes projets en bref</h1>
                         <div id='projectBox' className='grid grid-cols-1 gap-3 overflow-scroll sm:h-96 md:mt-3'>
                             <div className='text-center border border-blue-400 rounded-3xl space-y-2 p-2'>
@@ -136,7 +136,7 @@ function Home() {
                     </div>
                 </div>
             </div >
-            <i id='arrowDownPage' className='absolute animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
+            <i id='arrowDownPage' className='absolute animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
         </>
     )
 }
