@@ -67,7 +67,7 @@ function Home() {
                                 <p className="font-sans shadow-none text-gray-300 text-lg">{response.message ? response.message : 'API Indisponible...'}</p>
                             )}
                         </div>
-                        <img className='rounded-full h-36 md:h-64' src='/assets/photo-profil.png'></img>
+                        <img className='rounded-full h-44 md:h-72' src='/assets/photo-profil.png'></img>
                     </div>
                 </div>
                 <div className="grid mx-auto md:grid-cols-3 gap-4 font-sans mx-2">
@@ -78,7 +78,7 @@ function Home() {
                             Depuis ma deuxième année de BUT (2022-2023), je suis alternant à la Gendarmerie Nationale. Plus d'informations sont disponibles sur la <Link to="/projects" className='underline text-green-600'>page projets</Link>.
                         </p>
                     </div>
-                    <div className=' bg-gray-200 bg-gradient-to-tl from-gray-400 rounded-3xl p-2 text-black'>
+                    <div className='grid bg-gray-200 bg-gradient-to-tl from-gray-400 rounded-3xl p-2 text-black items-center'>
                         <img src='/assets/gendarmerie.jpg' className="rounded-3xl" />
                     </div>
                 </div>
@@ -90,6 +90,7 @@ function Home() {
                         <ul className="list-disc pl-10">
                             <li>React.js</li>
                             <li>Twig</li>
+                            <li>TailwindCSS</li>
                         </ul>
                         <h2>⌨️ Back-End:</h2>
                         <ul className="list-disc pl-10">
@@ -123,7 +124,7 @@ function Home() {
                             <span id='arrow-down' className='invisible sm:visible sticky inset-0 bottom-1 text-center px-3 opacity-80 hover:opacity-100 hover:cursor-pointer bg-gray-300 m-auto rounded-full'><i className='fa fa-fw fa-arrow-down text-black'></i></span>
                         </div>
                     </div>
-                    <div className="sm:w-full sm:col-span-2 md:w-1/2 md:col-span-1 grid md:ml-5 grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full gap-2 sm:mt-12 md:mt-0">
+                    <div className="sm:w-full sm:col-span-2 md:w-1/2 md:col-span-1 grid md:ml-5 grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full gap-1 sm:mt-12 md:mt-0 my-5 md:my-0">
                         <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto col-span-2 xl:col-span-2" />
                         <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto col-span-2 sm:col-span-2 xl:col-span-2" />
                         <div className='h-fit inline-block align-middle col-span-4 xs:col-span-1 w-fit mx-auto xl:col-span-4'>
@@ -136,7 +137,7 @@ function Home() {
                     </div>
                 </div>
             </div >
-            <i id='arrowDownPage' className='absolute animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
+            <i id='arrowDownPage' className='absolute hover:animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
         </>
     )
 }
