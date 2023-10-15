@@ -31,8 +31,13 @@ body {
     src: url('Lobster/lobster.ttf');
 }
 
+@font-face {
+    font-family: alkatra;
+    src: url('Alkatra/alkatra.ttf');
+}
+
 .title-font {
-    font-family: lobster;
+    font-family: alkatra;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 7px #896900;
+    text-shadow: 2px 2px 7px #6e8100;
 }

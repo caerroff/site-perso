@@ -14,7 +14,7 @@ function showHideMobileMenu() {
 function Header() {
 
     return (
-        <nav className="sticky inset-0 h-fit sm:relative bg-indigo-500 via-indigo-700 bg-gradient-to-r from-gray-800">
+        <nav className="sticky inset-0 h-fit sm:relative bg-blue-950 bg-gradient-to-r from-gray-800">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
