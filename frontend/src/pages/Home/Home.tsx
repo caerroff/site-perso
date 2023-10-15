@@ -15,7 +15,7 @@ function Home() {
         setLoading(true)
         async function fetchApi() {
             try {
-                const response = await fetch('http://0.0.0.0:3000')
+                const response = await fetch('http://172.232.37.37:3000')
                 const data = await response.json()
                 setResponse(data)
             } catch (error) {
