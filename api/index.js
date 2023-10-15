@@ -1,10 +1,12 @@
 const cors = require('cors');
-app.use(cors({
-    origin: '*'
-}));
+
 
 const api = require('express')();
 const PORT = 3000;
+api.use(cors({
+    origin: '*'
+}));
+
 api.listen(
     PORT,
     () => console.log(`API running on port http://localhost:${PORT}`)
