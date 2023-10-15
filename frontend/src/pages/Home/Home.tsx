@@ -70,7 +70,7 @@ function Home() {
                         <img className='rounded-full h-64' src='/assets/photo-profil.png'></img>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4 font-sans">
                     <div className="bg-gray-200 bg-gradient-to-tl col-span-2 from-gray-400 rounded-3xl text-center text-black">
                         <p className='text-xl pt-3'>👋🏻 Bonjour, je m'appelle Thomas Masin et je suis développeur FullStack en freelance</p>
                         <p className='w-full pt-5'>👨🏻‍🎓 Étudiant en informatique à l'IUT de Blagnac (31), je suis passionné par la programmation et l'informatique depuis mes 12 ans.
