@@ -35,12 +35,31 @@ function Home() {
                 behavior: 'smooth'
             })
         })
+
+        const arrowDownPage = document.getElementById('arrowDownPage')
+        const title = document.getElementById('title')
+        arrowDownPage?.addEventListener('click', () => {
+            arrowDownPage?.scrollIntoView({
+                behavior: 'smooth',
+            })
+            arrowDownPage?.classList.add('invisible')
+        })
+        document.addEventListener('scroll', () => {
+            console.log(window.scrollY)
+            if (window.scrollY == 0) {
+                arrowDownPage?.classList.remove('invisible')
+            } else {
+                arrowDownPage?.classList.add('invisible')
+            }
+        })
     }, [])
 
     return (
         <>
-            <div className='xl:text-xl bg-blue-950 bg-gradient-to-br via-indigo-950 from-indigo-800 text-white m-3 md:m-5 rounded-3xl px-3 md:px-10 py-2 text-center h-fit pt-3'>
-                <p className=" text-5xl font-mono pt-8 title-font mb-2">Développeur Freelance</p>
+            <div id='container' className='xl:text-xl bg-blue-950 bg-gradient-to-b via-indigo-950 from-indigo-800 text-white m-3 md:m-5 rounded-3xl px-3 md:px-10 py-2 text-center h-fit pt-3'>
+                <div className='h-screen pt-96'>
+                    <p id='title' className='title-font text-8xl font-semibold'>Développeur Fullstack Freelance</p>
+                </div>
                 {loading ? (
                     <div className='mx-auto w-full'>
                         <Loader />
@@ -105,6 +124,7 @@ function Home() {
                         <img src='/assets/tux.png' alt="linux logo" className="h-12 md:h-24 mx-auto col-span-4 sm:col-span-1 xl:col-span-4" />
                     </div>
                 </div>
+                <i id='arrowDownPage' className='absolute bottom-4  fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
             </div>
         </>
     )
