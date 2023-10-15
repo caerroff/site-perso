@@ -1,3 +1,8 @@
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 const api = require('express')();
 const PORT = 3000;
 api.listen(
