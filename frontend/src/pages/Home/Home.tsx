@@ -26,15 +26,7 @@ function Home() {
             }
         }
         fetchApi()
-        const arrowDown = document.getElementById('arrow-down')
-        const projectBox = document.getElementById('projectBox')
-        arrowDown?.addEventListener('click', () => {
-            projectBox?.scroll({
-                top: projectBox.scrollHeight,
-                left: 0,
-                behavior: 'smooth'
-            })
-        })
+
 
         const arrowDownPage = document.getElementById('arrowDownPage')
         arrowDownPage?.addEventListener('click', () => {
@@ -83,7 +75,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="text-left mb-3 md:mb-10 md:mt-2 sm:h-fit md:h-fit flex flex-col xs:flex-col md:py-32 sm:grid sm:grid-cols-2 md:flex md:flex-row h-fit">
+                <div className="text-left mb-3 md:mb-10 md:mt-2 h-fit md:h-fit flex flex-col xs:flex-col md:py-32 sm:grid sm:grid-cols-2 md:flex md:flex-row">
                     <div className="w-full md:w-1/4 p-5">
                         <h1 className="text-xl font-semibold">Ma Stack</h1>
                         <h2>☀️ Front-End:</h2>
@@ -105,7 +97,7 @@ function Home() {
                     </div>
                     <div className='w-4/5 mx-auto md:w-1/4 pt-5'>
                         <h1 className='text-xl text-center font-semibold mb-3'>Mes projets en bref</h1>
-                        <div id='projectBox' className='grid grid-cols-1 gap-3 overflow-scroll sm:h-96 md:mt-3'>
+                        <div id='projectBox' className='grid grid-cols-1 gap-3 overflow-scroll md:mt-3'>
                             <div className='text-center border border-blue-400 rounded-3xl space-y-2 p-2'>
                                 <h2>Développement d'une application nationale</h2>
                                 <h3 className='text-gray-300 text-sm'>Gendarmerie Nationale</h3>
@@ -121,7 +113,6 @@ function Home() {
                                 <h3 className='text-gray-300 text-sm'>Personnel</h3>
                                 <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
                             </div>
-                            <span id='arrow-down' className='invisible sm:visible sticky inset-0 bottom-1 text-center px-3 opacity-80 hover:opacity-100 hover:cursor-pointer bg-gray-300 m-auto rounded-full'><i className='fa fa-fw fa-arrow-down text-black'></i></span>
                         </div>
                     </div>
                     <div className="sm:w-full sm:col-span-2 md:w-1/2 md:col-span-1 grid md:ml-5 grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full gap-1 sm:mt-12 md:mt-0 my-5 md:my-0">
