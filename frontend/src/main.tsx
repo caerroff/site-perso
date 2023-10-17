@@ -9,6 +9,7 @@ import './index.css'
 import Header from './components/Header/header.tsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer/index.tsx'
+import Projects from './pages/Projects/index.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/blog/new' element={<BlogNew />} />
+        <Route path='/projects' element={<Projects />} />
         <Route path='/calendar' element={<Calendar />} />
         <Route path='*' element={<Error />} />
       </Routes>
