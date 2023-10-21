@@ -33,13 +33,13 @@ function Home() {
             arrowDownPage?.scrollIntoView({
                 behavior: 'smooth',
             })
-            arrowDownPage?.classList.add('invisible')
+            arrowDownPage?.classList.add('md:invisible')
         })
         document.addEventListener('scroll', () => {
             if (window.scrollY < 200) {
-                arrowDownPage?.classList.remove('invisible')
+                arrowDownPage?.classList.remove('md:invisible')
             } else {
-                arrowDownPage?.classList.add('invisible')
+                arrowDownPage?.classList.add('md:invisible')
             }
         })
     }, [])
@@ -47,7 +47,7 @@ function Home() {
     return (
         <>
             <div id='container' className='xl:text-xl dark:bg-blue-800 bg-gradient-to-t dark:via-indigo-950 via-indigo-300 dark:from-purple-950 from-purple-300 text-white m-3 md:m-5 rounded-3xl space-y-2 h-fit'>
-                <section className='h-screen pt-64 md:pt-96'>
+                <section className='h-screen pt-[270px] sm:pt-[70%] md:pt-96'>
                     <div className='grid md:grid-cols-3 content-center items-center justify-items-center h-64 space-y-8 md:space-y-0 md:space-x-8'>
                         <div id='title' className='text-center font-semibold md:col-span-2'>
                             <p className='title-font text-6xl md:text-8xl'>Développeur Fullstack Freelance</p>
@@ -65,6 +65,9 @@ function Home() {
                         <img className='rounded-full h-44 md:h-72' src='/assets/photo-profil.png'></img>
                     </div>
                 </section>
+                <div className='absolute bottom-4 inset-x-[50%]'>
+                    <i id='arrowDownPage' className='invisible md:visible hover:animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
+                </div>
                 <section className='px-2 md:px-5 py-2 md:py-10'>
                     <div className="grid md:grid-cols-3 gap-4 font-sans mx-2">
                         <div className="bg-gray-200 bg-gradient-to-tl md:col-span-2 from-gray-400 rounded-3xl text-center text-black p-2">
@@ -134,7 +137,6 @@ function Home() {
                 </section>
 
             </div >
-            <i id='arrowDownPage' className='absolute hidden md:visible hover:animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
         </>
     )
 }
