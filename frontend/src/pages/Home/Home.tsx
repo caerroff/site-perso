@@ -119,16 +119,16 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="sm:w-full sm:col-span-2 md:w-1/2 md:col-span-1 grid md:ml-5 grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-full gap-1 sm:mt-12 md:mt-0 my-5 md:my-0">
-                            <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto col-span-2 xl:col-span-2" />
-                            <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto col-span-2 sm:col-span-2 xl:col-span-2" />
-                            <div className='h-fit inline-block align-middle col-span-4 xs:col-span-1 w-fit mx-auto xl:col-span-4'>
+                        <div className="w-full col-span-2 h-fit md:w-1/2 grid sm:grid-cols-2 md:ml-5 gap-1 sm:mt-12 md:mt-0 my-5 md:my-0 space-y-3">
+                            <img src='/assets/react.svg' alt="react logo" className="h-14 md:h-24 mx-auto" />
+                            <img src='/assets/symfony.png' alt="symfony logo" className="h-14 md:h-24 pt-0 mx-auto" />
+                            <div className='h-fit inline-block align-middle w-fit mx-auto col-span-2'>
                                 <img src='/assets/htmlcss.png' alt="html logo" className='h-12 md:h-14 mr-1 mx-auto' />
                                 <img src='/assets/js.png' alt="js logo" className='h-10 md:h-12 mt-2 mx-auto' />
                             </div>
-                            <img src='/assets/docker.webp' alt="docker logo" className="h-16 md:h-24 mx-auto col-span-2 sm:col-span-1 xl:col-span-2" />
-                            <img src='/assets/mariadb.png' alt="mariadb logo" className="h-16 md:h-24 mx-auto col-span-2 sm:col-span-1 xl:col-span-2" />
-                            <img src='/assets/tux.png' alt="linux logo" className="h-12 md:h-24 mx-auto col-span-4 sm:col-span-1 xl:col-span-4" />
+                            <img src='/assets/docker.webp' alt="docker logo" className="h-16 md:h-24 mx-auto" />
+                            <img src='/assets/mariadb.png' alt="mariadb logo" className="h-16 md:h-24 mx-auto" />
+                            <img src='/assets/tux.png' alt="linux logo" className="h-12 md:h-24 mx-auto col-span-2 " />
                         </div>
                     </div>
                 </section>
