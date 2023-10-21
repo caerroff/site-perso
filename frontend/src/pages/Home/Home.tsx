@@ -134,7 +134,7 @@ function Home() {
                 </section>
 
             </div >
-            <i id='arrowDownPage' className='absolute hover:animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
+            <i id='arrowDownPage' className='absolute hidden md:visible hover:animate-bounce hover:cursor-pointer hover:opacity-100 active:animate-ping bottom-4 left-48 md:left-1/2 fa fa-arrow-down text-3xl text-black bg-gray-300 opacity-60 p-2 px-3 rounded-full'></i>
         </>
     )
 }
