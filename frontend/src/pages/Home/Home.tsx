@@ -47,8 +47,8 @@ function Home() {
     return (
         <>
             <div id='container' className='xl:text-xl dark:bg-blue-800 bg-gradient-to-t dark:via-indigo-950 via-indigo-300 dark:from-purple-950 from-purple-300 text-white m-3 md:m-5 rounded-3xl space-y-2 h-fit'>
-                <section className='h-screen pt-[270px] sm:pt-[70%] md:pt-96'>
-                    <div className='grid md:grid-cols-3 content-center items-center justify-items-center h-64 space-y-8 md:space-y-0 md:space-x-8'>
+                <section className='min-h-screen pt-24 md:pt-52 lg:pt-96'>
+                    <div className='grid md:grid-cols-3 content-center items-center justify-items-center h-fit space-y-8 md:space-y-0 md:space-x-8'>
                         <div id='title' className='text-center font-semibold md:col-span-2'>
                             <p className='title-font text-5xl md:text-8xl'>Développeur Fullstack Freelance</p>
                             {loading ? (
