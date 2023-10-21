@@ -50,7 +50,7 @@ function Home() {
                 <section className='h-screen pt-[270px] sm:pt-[70%] md:pt-96'>
                     <div className='grid md:grid-cols-3 content-center items-center justify-items-center h-64 space-y-8 md:space-y-0 md:space-x-8'>
                         <div id='title' className='text-center font-semibold md:col-span-2'>
-                            <p className='title-font text-6xl md:text-8xl'>Développeur Fullstack Freelance</p>
+                            <p className='title-font text-5xl md:text-8xl'>Développeur Fullstack Freelance</p>
                             {loading ? (
                                 <div className='mx-auto w-full'>
                                     <Loader />
