@@ -55,8 +55,8 @@ function Header() {
 
                         <div className="relative ml-3">
                             <div>
-                                <button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <img className="h-8 w-8 rounded-full" src="https://placehold.co/600x400" alt="" />
+                                <button className="relative flex rounded-full bg-gray-800 text-sm active:outline active:outline-white active:outline-2" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <Link to='/login' title='Login'><i className='fa fa-user bg-slate-700 p-[0.6rem] rounded-full text-white'></i></Link>
                                 </button>
                             </div>
                         </div>

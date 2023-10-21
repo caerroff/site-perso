@@ -5,6 +5,7 @@ import Error from './pages/Error/Error.tsx'
 import Blog from './pages/Blog/Blog.tsx'
 import BlogNew from './pages/Blog/BlogNew.tsx'
 import Calendar from './pages/Calendar/Calendar.tsx'
+import Login from './pages/Login/index.tsx'
 import './index.css'
 import Header from './components/Header/header.tsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/blog/new' element={<BlogNew />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/calendar' element={<Calendar />} />
+        <Route path='/login' element={<Login />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
