@@ -4,7 +4,7 @@ function Projects() {
         <>
             <div className="grid justify-center">
                 <div className='min-h-screen max-w-[2000px] bg-blue-800 bg-gradient-to-t from-gray-800 m-5 p-5 rounded-[20px] space-y-10'>
-                    <h1 className='text-center font-serif text-7xl'>Mes projets</h1>
+                    <h1 className='text-center font-serif text-5xl md:text-7xl text-white'>Mes projets</h1>
 
                     <div className="grid grid-cols-1 gap-2 md:gap-0 lg:flex lg:space-x-2">
                         <div className='lg:w-2/3 bg-white p-3 rounded-[20px] space-y-2'>
