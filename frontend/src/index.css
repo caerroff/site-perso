@@ -45,7 +45,7 @@ body {
 }
 
 .blob-bg {
-    background: url('assets/blob.svg');
+    background: url('blob.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
