@@ -44,19 +44,10 @@ body {
     font-family: wix;
 }
 
-.blob {
-    background-color: #550000;
-    border-radius: 50%;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-
-    width: 20rem;
-    height: 10rem;
+.blob-bg {
+    background: url('assets/blob.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .title-font {
