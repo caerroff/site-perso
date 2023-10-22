@@ -31,8 +31,32 @@ body {
 }
 
 @font-face {
+    font-family: wix;
+    src: url('Wix/Wix.ttf');
+}
+
+@font-face {
     font-family: alkatra;
     src: url('Alkatra/alkatra.ttf');
+}
+
+body {
+    font-family: wix;
+}
+
+.blob {
+    background-color: #550000;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+
+    width: 20rem;
+    height: 10rem;
 }
 
 .title-font {
