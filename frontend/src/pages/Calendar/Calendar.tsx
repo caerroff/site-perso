@@ -4,11 +4,13 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 function Calendar() {
     return (
         <>
-            <FullCalendar
-                plugins={[dayGridPlugin]}
-                initialView="dayGridMonth"
-                locale='FR-fr'
-            />
+            <div className='mx-auto max-w-[2000px]'>
+                <FullCalendar
+                    plugins={[dayGridPlugin]}
+                    initialView="dayGridMonth"
+                    locale='FR-fr'
+                />
+            </div>
         </>
     )
 }
