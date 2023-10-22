@@ -59,7 +59,7 @@ function Home() {
                                 ) : (
                                     <p className="font-sans shadow-none text-gray-300 text-lg">{response.message ? response.message : 'API Indisponible...'}</p>
                                 )}
-                                <div className='mt-3 md:mt-5 bg-[url(assets/blob.svg)] bg-no-repeat bg-center h-[15rem] p-auto flex align-middle justify-center items-center'>
+                                <div className='mt-3 md:mt-5 bg-[url("assets/blob.svg")] bg-no-repeat bg-center h-[15rem] p-auto flex align-middle justify-center items-center'>
                                     <a href='mailto:caerroff.dev@gmail.com' className='flex justify-center h-min'>
                                         <div className=" opacity-80 bg-opacity-60 bg-white text-black p-2 md:p-3 border-yellow-400 rounded-sm rounded-bl-2xl rounded-tr-2xl border-[3px]">Me contacter</div>
                                     </a>
@@ -140,7 +140,7 @@ function Home() {
                     </section>
 
                 </div >
-            </div>
+            </div >
 
         </>
     )
