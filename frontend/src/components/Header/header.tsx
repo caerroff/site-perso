@@ -38,10 +38,11 @@ function Header() {
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 <Link to="/" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Accueil</Link>
-                                <Link to="/formation" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Formation</Link>
+                                <Link to="/formation" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Formations</Link>
                                 {/* <Link to="/blog" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Blog</Link> */}
                                 <Link to="/projects" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Projets</Link>
                                 <Link to="/calendar" className="text-gray-200 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Calendrier</Link>
+                                <a href="/assets/cv.pdf" target='_blank' className="text-gray-200 hover:bg-red-700 border border-red-400 hover:text-white rounded-md px-3 py-2 text-md font-medium">Obtenir mon CV</a>
                             </div>
                         </div>
                     </div>
@@ -67,9 +68,11 @@ function Header() {
 
             <div className="hidden" id="mobile-menu">
                 <Link to="/" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Accueil</Link>
-                <Link to="/blog" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Blog</Link>
+                <Link to="/formation" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Formations</Link>
                 <Link to="/projects" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Projets</Link>
                 <Link to="/calendar" onClick={() => { showHideMobileMenu() }} className="text-gray-200  block rounded-md px-3 py-2 text-base font-medium">Calendrier</Link>
+                <a href="/assets/cv.pdf" target='_blank' className="text-gray-200 border-red-300 border  block rounded-md px-3 py-2 text-base font-medium">Obtenir mon CV</a>
+
             </div>
         </nav >
 
