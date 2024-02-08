@@ -86,21 +86,25 @@ function Home() {
                         </div>
 
                         <div className="text-left mb-3 md:mb-10 md:mt-2 h-fit md:h-fit flex flex-col xs:flex-col md:py-32 sm:grid sm:grid-cols-2 md:flex md:flex-row">
-                            <div className="w-full md:w-1/4 p-5">
+                            <div className="w-full md:w-1/4 p-5 border border-gray-400 mx-3 rounded-2xl text-center">
                                 <h1 className="text-xl font-semibold">Ma Stack</h1>
+                                <br />
+
                                 <h2>☀️ Front-End:</h2>
-                                <ul className="list-disc pl-10">
+                                <ul className="list-disc pl-10 text-left">
                                     <li>React.js</li>
                                     <li>Twig</li>
                                     <li>TailwindCSS</li>
                                 </ul>
+                                <br />
                                 <h2>⌨️ Back-End:</h2>
-                                <ul className="list-disc pl-10">
+                                <ul className="list-disc pl-10 text-left">
                                     <li>PHP/Symfony</li>
                                     <li>MariaDB / PostgreSQL / MySQL</li>
                                 </ul>
+                                <br />
                                 <h2>🛜 Serveur:</h2>
-                                <ul className="list-disc pl-10">
+                                <ul className="list-disc pl-10 text-left">
                                     <li>Debian 12</li>
                                     <li>Docker</li>
                                 </ul>
@@ -114,14 +118,14 @@ function Home() {
                                         <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
                                     </div>
                                     <div className='text-center border border-blue-400 rounded-3xl space-y-2 p-2'>
-                                        <h2>Développement d'une application nationale</h2>
+                                        <h2>Développement d'applications régionales</h2>
                                         <h3 className='text-gray-300 text-sm'>Gendarmerie Nationale</h3>
-                                        <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
+                                        <p className='text-xs'>Plusieurs application répondant à des problématiques de la Région de Gendarmerie d'Occitanie</p>
                                     </div>
                                     <div className='text-center border border-red-400 rounded-3xl space-y-2 p-2'>
-                                        <h2>Développement d'une application nationale</h2>
-                                        <h3 className='text-gray-300 text-sm'>Personnel</h3>
-                                        <p className='text-xs'>Sol@ris, Application servant à répertorier les matériels informatiques et radios de la Gendarmerie, de la Police et du Ministère de l'Intérieur</p>
+                                        <h2>Développement d'une application en freelance</h2>
+                                        <h3 className='text-gray-300 text-sm'>Autoentreprise</h3>
+                                        <p className='text-xs'>Application dévelopée avec Retool pour une société de pose de panneaux photovoltaïques dans les terrains agricoles.</p>
                                     </div>
                                 </div>
                             </div>

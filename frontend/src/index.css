@@ -62,3 +62,20 @@ body {
     height: 100%;
     background: #6e8100;
 }
+
+table {
+    @apply table-auto w-full text-center border-2 border-gray-700 border-collapse bg-blue-200;
+}
+
+td,
+th {
+    @apply border-2 border-gray-700 border-collapse p-5;
+}
+
+.now{
+    @apply text-red-700 bg-gray-300;
+}
+
+.future{
+    @apply text-gray-400 bg-blue-100;
+}

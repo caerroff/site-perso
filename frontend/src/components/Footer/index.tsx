@@ -13,12 +13,12 @@ function Footer() {
                             <div className="flex space-x-1">
                                 <a href='mailto:caerroff.dev@gmail.com' title='Mail'><i className='fa fa-envelope p-2 text-2xl bg-gray-700 rounded-full'></i></a>
                                 <a href='https://www.linkedin.com/in/thomas-masin-014137222/' target='_blank' title='Linkedin'><i className='fa fa-linkedin p-2 text-2xl bg-gray-700 rounded-full'></i></a>
-                                <i className='fa fa-m p-2 text-2xl bg-gray-700 rounded-full'></i>
+                                <a href='https://github.com/caerroff' target='_blank' title='GitHub'><i className='fa fa-github p-2 text-2xl bg-gray-700 rounded-full'></i></a>
                             </div>
                         </div>
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 Caerroff. Tous droits réservés.</span>
+                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Caerroff. Tous droits réservés.</span>
                 </div>
             </footer>
         </>
